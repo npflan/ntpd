@@ -24,7 +24,7 @@ items:
                 topologyKey: "kubernetes.io/hostname"
         containers:
         - name: ntpd
-          image: npflan/ntpd:v4
+          image: npflan/ntpd:latest
           resources:
             limits:
               memory: 100M
