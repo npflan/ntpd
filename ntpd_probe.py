@@ -8,7 +8,7 @@ port = 123
 try:
     client = ntplib.NTPClient()
     response = client.request(ip, port=port, version=3)
-    logging.info('offset:{}'.format(response.offset))
+    logging.info('NTP probe offset:{}'.format(response.offset))
 except:
-    logging.error('error')
+    logging.error('NTP probe error')
     sys.exit(1)
