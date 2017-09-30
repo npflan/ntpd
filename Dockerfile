@@ -7,6 +7,7 @@ RUN apt-get update && \
   apt-get autoremove -y && \
   apt-get clean -y
 
+COPY ntpd.conf /etc/ntpd.conf
 COPY . /usr/local/probe
 CMD ["/usr/sbin/ntpd", "-n"]
 EXPOSE 123
